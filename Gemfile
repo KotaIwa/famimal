@@ -51,5 +51,8 @@ group :development do
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
   gem 'mechanize'
+  group :production, :staging do
+  gem 'rails_12factor'
+end
 end
 
