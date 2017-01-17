@@ -2,10 +2,12 @@
 <h1><%= @pet.breed %>の子犬詳細　子犬ID：<%= @pet.id %></h1>
 </div>
 
-  <% if (current_user.id == @pet.user.id) && (current_user.seller_or_buyer == 1) %>
+  <% if user_signed_in? %>
+  <% if current_user.id == @pet.user_id %>
     <div class="profile_edit">
       <%= link_to "子犬の情報編集", edit_pet_path(@pet.id), {:class => "btn btn-primary withripple" }%>
     </div>
+  <% end %>
   <% end %>
 
 <div style="text-align:center;padding-top:10px;">
