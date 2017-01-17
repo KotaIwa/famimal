@@ -50,5 +50,8 @@ test:
 production:
   <<: *default
   database: famimal_production
-  username: famimal
-  password: <%= ENV['FAMIMAL_DATABASE_PASSWORD'] %>
+  username: root
+  password: techcamp
+  #database: famimal_production
+  #username: famimal
+  #password: <%= ENV['FAMIMAL_DATABASE_PASSWORD'] %>
